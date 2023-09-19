@@ -1,25 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../src/assets/logo.svg";
+import Aside from "./Aside";
 import Profile from "../src/assets/avatar.jpeg";
 import {
   RiMenuFill,
   RiArrowDropDownLine,
-  RiCloseLine,
   RiComputerLine,
   RiSettings2Line,
   RiNotification2Line,
 } from "react-icons/ri";
 
 const Header = () => {
+  const [toggle, setToggle] = useState(true);
+
   return (
     <div>
       <div className="header-container flex justify-between w-full border-b-2 h-20">
         {/* left side of header */}
         <div className="header-left-side flex justify-start p-6 items-center">
           <div className="cursor-pointer  hover:bg-slate-200 rounded p-2">
-            <RiMenuFill color="000" size={20} />
+            {toggle ? (
+              <>
+                <Aside />
+                <RiMenuFill
+                  color="000"
+                  size={20}
+                  onClick={() => setToggle(false)}
+                />
+              </>
+            ) : (
+              <>
+                <RiMenuFill
+                  color="000"
+                  size={20}
+                  onClick={() => setToggle(true)}
+                />
+              </>
+            )}
           </div>
-          <img className="px-6 cursor-pointer  " src={Logo} alt="logo" />
+          <img className="px-6 cursor-pointer" src={Logo} alt="logo" />
           {/* the dropdowns */}
           <div className="dropdown-container flex px-5 cursor-pointer text-base">
             <div className="cursor-pointer flex items-center hover:bg-slate-200 rounded p-2">
