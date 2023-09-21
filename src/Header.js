@@ -10,33 +10,18 @@ import {
   RiNotification2Line,
 } from "react-icons/ri";
 
-const Header = () => {
-  const [toggle, setToggle] = useState(false);
-
+const Header = ({ handleToggle }) => {
   return (
     <div>
       <div className="header-container flex justify-between w-full border-b-2 h-20">
         {/* left side of header */}
         <div className="header-left-side flex justify-start p-6 items-center">
           <div className="cursor-pointer  hover:bg-slate-200 rounded p-2">
-            {toggle ? (
-              <>
-                <RiMenuFill
-                  color="000"
-                  size={20}
-                  onClick={() => setToggle(true)}
-                />
-              </>
-            ) : (
-              <>
-                <Aside />
-                <RiMenuFill
-                  color="000"
-                  size={20}
-                  onClick={() => setToggle(false)}
-                />
-              </>
-            )}
+            <RiMenuFill
+              color="000"
+              size={20}
+              onClick={() => handleToggle((prev) => !prev)}
+            />
           </div>
           <img className="px-6 cursor-pointer" src={Logo} alt="logo" />
           {/* the dropdowns */}

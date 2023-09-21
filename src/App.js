@@ -1,12 +1,14 @@
 import Header from "./Header";
 import Aside from "./Aside";
 import Home from "./Home";
+import Layout from "./Layout";
 
 function App() {
   return (
     <div className="App">
-        <Header/>
-        <Home/>
+      <Layout>
+        <Home />
+      </Layout>
     </div>
   );
 }

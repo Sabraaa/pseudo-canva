@@ -1,4 +1,6 @@
 import React from "react";
+import Profile from "../src/assets/avatar.jpeg";
+
 import {
   RiArrowLeftDownLine,
   RiGridLine,
@@ -12,11 +14,17 @@ import {
 } from "react-icons/ri";
 const Aside = () => {
   return (
-    <div className="aside-container">
-      <div className="aside-profile">
-        <img />
-        <h3> Personal</h3>
-        <p> free. 1</p>
+    <div className="aside-container fixed left-0">
+      <div className="aside-profile flex">
+        <img
+          src={Profile}
+          alt="avatar"
+          className=" cursor-pointer rounded-full w-10 h-10"
+        />
+        <div className="pl-6">
+          <h3> Personal</h3>
+          <p> free. 1</p>
+        </div>
       </div>
       <button type="button"> Try Canva Pro </button>
       <div>
