@@ -14,12 +14,13 @@ import {
 } from "react-icons/ri";
 const Aside = () => {
   return (
-    <div className="aside-container fixed left-0">
+    // CONTAINER
+    <div className="fixed left-0">
       <div className="aside-profile flex">
         <img
           src={Profile}
           alt="avatar"
-          className=" cursor-pointer rounded-full w-10 h-10"
+          className="cursor-pointer rounded-full w-10 h-10"
         />
         <div className="pl-6">
           <h3> Personal</h3>
