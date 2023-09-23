@@ -15,57 +15,79 @@ import {
 const Aside = () => {
   return (
     // CONTAINER
-    <div className="fixed left-0">
-      <div className="aside-profile flex">
+    <div className="h-[calc(100%_-_78px)] md">
+      {/* PROFILE */}
+      <div className="flex p-3">
         <img
           src={Profile}
           alt="avatar"
-          className="cursor-pointer rounded-full w-10 h-10"
+          className="cursor-pointer rounded-full w-10 h-10 "
         />
         <div className="pl-6">
-          <h3> Personal</h3>
-          <p> free. 1</p>
+          <h3 className="font-semibold"> Personal</h3>
+          <p className="text-sm"> free. 1</p>
         </div>
       </div>
-      <button type="button"> Try Canva Pro </button>
-      <div>
-        <RiArrowLeftDownLine />
-        <p> Back to Home</p>
-      </div>
-      <div>
-        <RiGridLine />
-        <p>All templates</p>
-      </div>
-      <div>
-        <RiPictureInPicture2Line />
-        <p>Photos</p>
-      </div>
-      <div>
-        <RiShape2Line />
-        <p>Icons</p>
-      </div>
-      <div />
-      <h5> Your Content </h5>
-      <div>
-        <RiHeart3Line />
-        <p> Creators You Follow</p>
-      </div>
-      <div>
-        <RiPriceTag2Line />/<p>Brand Templates</p>
-      </div>
-      <div>
-        <RiStarLine />
-        <p>Starred</p>
-      </div>
-
-      <div>
-        <RiTeamLine />
-        <p>Create a team</p>
-      </div>
-      <div />
-      <div>
-        <RiRecycleLine />
-        <p>Trash</p>
+      {/* BUTTON */}
+      <button
+        className="w-44 h-10 rounded text-sm  px-3 bg-slate-200 m-4"
+        type="button"
+      >
+        Try Canva Pro
+      </button>
+      {/* OPTIONS */}
+      <div className="flex h-full justify-between flex-col">
+        {/* TOP OPTIONS*/}
+        <div className="flex flex-col ">
+          <div className="flex items-center p-4  hover:bg-slate-200 rounded">
+            <RiArrowLeftDownLine
+              size={22}
+              className="flex justify-center mx-1"
+            />
+            <p> Back to Home</p>
+          </div>
+          <div className="flex items-center p-4  hover:bg-slate-200 rounded">
+            <RiGridLine size={22} className="flex justify-center mx-1" />
+            <p>All templates</p>
+          </div>
+          <div className="flex items-center p-4  hover:bg-slate-200 rounded">
+            <RiPictureInPicture2Line
+              size={22}
+              className="flex justify-center mx-2"
+            />
+            <p>Photos</p>
+          </div>
+          <div className="flex items-center p-4  hover:bg-slate-200 rounded">
+            <RiShape2Line size={22} className="flex justify-center mx-2" />
+            <p>Icons</p>
+          </div>
+          <div />
+          <h5 className="text-sm p-4 pl-2"> Your Content </h5>
+          <div className="flex items-center p-4  hover:bg-slate-200 rounded">
+            <RiHeart3Line size={22} className="flex justify-center mx-2" />
+            <p> Creators You Follow</p>
+          </div>
+          <div className="flex items-center p-4  hover:bg-slate-200 rounded">
+            <RiPriceTag2Line size={22} className="flex justify-center mx-2" />
+            <p>Brand Templates</p>
+          </div>
+          <div className="flex items-center p-4  hover:bg-slate-200 rounded">
+            <RiStarLine size={22} className="flex justify-center mx-2" />
+            <p>Starred</p>
+          </div>
+        </div>
+        {/* BOTTOM OPTIONS*/}
+        <div className="flex flex-col ">
+          <div className="flex items-center p-4  hover:bg-slate-200 rounded ">
+            <RiTeamLine size={22} className="flex justify-center mx-2" />
+            <p>Create a team</p>
+          </div>
+          <div className=" border-2" />
+          <div className="flex items-center p-4  hover:bg-slate-200 rounded">
+            <RiRecycleLine size={22} className="flex justify-center mx-2" />
+            <p>Trash</p>
+          </div>
+        </div>
       </div>
     </div>
   );

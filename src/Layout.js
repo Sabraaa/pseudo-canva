@@ -8,8 +8,10 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Header handleToggle={setShowAside} />
-      {showAside ? <Aside /> : <></>}
-      <main className={showAside ? "ml-[200px]" : "ml-0"}>{children}</main>
+      <div className="flex">
+        {showAside ? <Aside /> : <></>}
+        <main>{children}</main>
+      </div>
     </div>
   );
 };

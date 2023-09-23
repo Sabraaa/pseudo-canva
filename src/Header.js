@@ -8,6 +8,8 @@ import {
   RiComputerLine,
   RiSettings2Line,
   RiNotification2Line,
+  RiSearch2Line,
+  RiThreadsLine,
 } from "react-icons/ri";
 
 const Header = ({ handleToggle }) => {
@@ -26,25 +28,31 @@ const Header = ({ handleToggle }) => {
           </div>
           <img className="px-6 cursor-pointer" src={Logo} alt="logo" />
           {/*THE DROPDOWNS */}
-          <div className="flex px-5 cursor-pointer text-base">
+
+          {/* small screens */}
+          <div className="px-5 cursor-pointer hover:bg-slate-200 rounded p-2 mx-2 hidden xl:flex sm:hidden">
+            <h1 className=" flex items-center text-xl">•••</h1>
+          </div>
+
+          <div className="flex px-5 cursor-pointer text-base xl:hidden">
             <div className="cursor-pointer flex items-center hover:bg-slate-200 rounded p-2">
-              <p>Design spotlight</p>
+              <p className="text-sm">Design spotlight</p>
               <RiArrowDropDownLine color="000" size={25} />
             </div>
             <div className="cursor-pointer flex items-center hover:bg-slate-200 rounded p-2">
-              <p>Business</p>
+              <p className="text-sm">Business</p>
               <RiArrowDropDownLine color="000" size={25} />
             </div>
             <div className="cursor-pointer flex items-center hover:bg-slate-200 rounded p-2">
-              <p>Education</p>
+              <p className="text-sm">Education</p>
               <RiArrowDropDownLine color="000" size={25} />
             </div>
             <div className="cursor-pointer flex items-center hover:bg-slate-200 rounded p-2">
-              <p>Plans and pricing</p>
+              <p className="text-sm">Plans and pricing</p>
               <RiArrowDropDownLine color="000" size={25} />
             </div>
             <div className="cursor-pointer flex items-center hover:bg-slate-200 rounded p-2">
-              <p>Learn</p>
+              <p className="text-sm">Learn</p>
               <RiArrowDropDownLine color="000" size={25} />
             </div>
           </div>
@@ -52,7 +60,21 @@ const Header = ({ handleToggle }) => {
 
         {/* THE RIGHT SIDE OF THE HEADER*/}
         <div className="flex justify-end p-6 items-center">
-          <div className="icons flex ">
+          {/* input */}
+          <div className=" flex border items-center rounded-md hover:border-stone-400 focus:border-blue-300 lg:hidden">
+            <RiSearch2Line
+              color="000"
+              size={22}
+              className="flex items-center justify-between mx-2 "
+            />
+            <input
+              type="text"
+              placeholder="search thousands of templates..."
+              className="h-10 w-80 focus:outline-none flex-wrap"
+            />
+          </div>
+          {/* icons */}
+          <div className="flex sm:hidden">
             <div className="cursor-pointer p-3  hover:bg-slate-200 rounded">
               <RiComputerLine color="000" size={22} />
             </div>
@@ -64,7 +86,7 @@ const Header = ({ handleToggle }) => {
             </div>
           </div>
           <button
-            className="w-22 h-9 rounded text-sm px-3 bg-violet-400 text-white mx-4"
+            className="flex items-center justify-center flex-nowrap w-32 h-10 rounded text-sm  px-3 bg-violet-400 text-white mx-4"
             type="button"
           >
             Create a design
