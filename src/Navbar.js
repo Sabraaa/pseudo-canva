@@ -1,18 +1,21 @@
 import React from "react";
-import { RiArrowDropDownLine, RiSearch2Line } from "react-icons/ri";
-import Aside from "./Aside";
+import { RiSearch2Line } from "react-icons/ri";
+import Icons from "./components/Icons";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="flex justify-center items-center">
       {/* GRADIENT BOX */}
-      <div className={`bg-gradient-to-r from-emerald-200 from-10% via-sky-200 via-30% to-indigo-300 to-90% 
-      rounded-md px-80 m-4 flex flex-col justify-center items-center
-       ${ Aside ? '-[calc(100% - 209.64px)] ' : 'w-screen'
-}`}>
-        <h1>What will you design today?</h1>
+      <div
+        className="bg-gradient-to-r from-emerald-300 from-10% via-sky-300 via-30% to-indigo-400 to-90% 
+      rounded-md  m-4 flex flex-col justify-around items-center w-11/12 h-64 px-80 py-40
+"
+      >
+        <h1 className=" text-white text-4xl font-semibold whitespace-nowrap">
+          What will you design today?
+        </h1>
         {/* input */}
-        <div className=" flex border items-center rounded-md hover:border-stone-400 focus:border-blue-300 lg:hidden">
+        <div className="w-4/5 flex border items-center rounded-md hover:border-stone-400 focus:border-blue-300  my-10">
           <RiSearch2Line
             color="000"
             size={40}
@@ -21,11 +24,20 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="search your content"
-            className="h-10 w-80 focus:outline-none flex-wrap"
+            className="h-10 w-full focus:outline-none flex-wrap"
           />
         </div>
         {/* icons */}
-        <div></div>
+        <div className="flex flex-row items-center justify-around">
+          <Icons title="For you" />
+          <Icons title="Docs" />
+          <Icons title="Whiteboards" />
+          <Icons title="presentations" />
+          <Icons title="Social media" />
+          <Icons title="Videos" />
+          <Icons title="Websites" />
+          <Icons title="More" />
+        </div>
       </div>
     </div>
   );

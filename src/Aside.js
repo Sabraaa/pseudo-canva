@@ -29,7 +29,7 @@ const Aside = () => {
   return (
     <div>
       {windowWidth > breakpoint ? (
-        <div className="md">
+        <div className="h-full md">
           {/* CONTAINER */}
           {/* PROFILE */}
           <div className="flex p-3">
