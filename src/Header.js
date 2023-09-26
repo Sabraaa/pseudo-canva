@@ -9,7 +9,6 @@ import {
   RiSettings2Line,
   RiNotification2Line,
   RiSearch2Line,
-  RiThreadsLine,
 } from "react-icons/ri";
 
 const Header = ({ handleToggle }) => {

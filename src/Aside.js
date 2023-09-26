@@ -15,7 +15,7 @@ import {
 const Aside = () => {
   return (
     // CONTAINER
-    <div className="h-[calc(100%_-_78px)] md">
+    <div className=" md">
       {/* PROFILE */}
       <div className="flex p-3">
         <img
