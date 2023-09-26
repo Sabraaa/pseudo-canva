@@ -80,7 +80,7 @@ const Aside = () => {
               <h5 className="text-sm p-4 pl-2"> Your Content </h5>
               <div className="flex items-center p-4  hover:bg-slate-200 rounded">
                 <RiHeart3Line size={22} className="flex justify-center mx-2" />
-                <p> Creators You Follow</p>
+                <p className="whitespace-nowrap"> Creators You Follow</p>
               </div>
               <div className="flex items-center p-4  hover:bg-slate-200 rounded">
                 <RiPriceTag2Line
