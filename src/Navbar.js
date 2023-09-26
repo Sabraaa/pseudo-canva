@@ -8,7 +8,7 @@ const Navbar = () => {
       {/* GRADIENT BOX */}
       <div
         className="bg-gradient-to-r from-emerald-300 from-10% via-sky-300 via-30% to-indigo-400 to-90% 
-      rounded-md  m-4 flex flex-col justify-around items-center w-11/12 h-64 px-80 py-40
+      rounded-md  m-4 flex flex-col justify-around items-center w-full h-64 px-52 py-40
 "
       >
         <h1 className=" text-white text-4xl font-semibold whitespace-nowrap">

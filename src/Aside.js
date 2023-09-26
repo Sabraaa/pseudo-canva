@@ -24,7 +24,7 @@ const Aside = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const breakpoint = 1200;
+  const breakpoint = 1500;
 
   return (
     <div>
